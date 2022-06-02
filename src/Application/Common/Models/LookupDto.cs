@@ -1,7 +1,7 @@
-﻿using center.net.Application.Common.Mappings;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Mappings;
+using HumanCenterNet.Domain.Entities;
 
-namespace center.net.Application.Common.Models;
+namespace HumanCenterNet.Application.Common.Models;
 
 // Note: This is currently just used to demonstrate applying multiple IMapFrom attributes.
 public class LookupDto : IMapFrom<TodoList>, IMapFrom<TodoItem>

@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using center.net.Application.Common.Behaviours;
+using HumanCenterNet.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 

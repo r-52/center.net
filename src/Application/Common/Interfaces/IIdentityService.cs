@@ -1,6 +1,6 @@
-﻿using center.net.Application.Common.Models;
+﻿using HumanCenterNet.Application.Common.Models;
 
-namespace center.net.Application.Common.Interfaces;
+namespace HumanCenterNet.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

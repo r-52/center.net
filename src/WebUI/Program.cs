@@ -1,4 +1,4 @@
-using center.net.Infrastructure.Persistence;
+using HumanCenterNet.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

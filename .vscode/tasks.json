@@ -1,0 +1,65 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/WebUI/WebUI.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/WebUI/WebUI.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/WebUI/WebUI.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "migration",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "ef",
+                "--startup-project",
+                "${workspaceFolder}/src/WebUI/WebUI.csproj",
+                "migrations",
+                "add",
+                "${input:nameOfMigration}",
+                "--output-dir",
+                "${workspaceFolder}/src/Infrastructure/Persistence/Migrations",
+                "-p",
+                "${workspaceFolder}/src/Infrastructure/Infrastructure.csproj"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "nameOfMigration",
+            "type": "promptString",
+            "description": "name of migration"
+        }
+    ]
+}

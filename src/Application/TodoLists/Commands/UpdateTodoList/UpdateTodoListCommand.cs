@@ -1,9 +1,9 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
 using MediatR;
 
-namespace center.net.Application.TodoLists.Commands.UpdateTodoList;
+namespace HumanCenterNet.Application.TodoLists.Commands.UpdateTodoList;
 
 public record UpdateTodoListCommand : IRequest
 {

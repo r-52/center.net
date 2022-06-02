@@ -1,4 +1,4 @@
-export const ApplicationName = 'center.net.WebUI';
+export const ApplicationName = 'HumanCenterNet.WebUI';
 
 export const ReturnUrlType = 'returnUrl';
 

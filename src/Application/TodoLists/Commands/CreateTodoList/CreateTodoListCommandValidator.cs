@@ -1,8 +1,8 @@
-﻿using center.net.Application.Common.Interfaces;
+﻿using HumanCenterNet.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.TodoLists.Commands.CreateTodoList;
+namespace HumanCenterNet.Application.TodoLists.Commands.CreateTodoList;
 
 public class CreateTodoListCommandValidator : AbstractValidator<CreateTodoListCommand>
 {

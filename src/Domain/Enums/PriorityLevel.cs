@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.Enums;
+﻿namespace HumanCenterNet.Domain.Enums;
 
 public enum PriorityLevel
 {

@@ -1,10 +1,10 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Application.Common.Models;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Infrastructure.Identity;
+namespace HumanCenterNet.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {

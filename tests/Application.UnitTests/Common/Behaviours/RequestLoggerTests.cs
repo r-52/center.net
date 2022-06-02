@@ -1,11 +1,11 @@
-﻿using center.net.Application.Common.Behaviours;
-using center.net.Application.Common.Interfaces;
-using center.net.Application.TodoItems.Commands.CreateTodoItem;
+﻿using HumanCenterNet.Application.Common.Behaviours;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace center.net.Application.UnitTests.Common.Behaviours;
+namespace HumanCenterNet.Application.UnitTests.Common.Behaviours;
 
 public class RequestLoggerTests
 {

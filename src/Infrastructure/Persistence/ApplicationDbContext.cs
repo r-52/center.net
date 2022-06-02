@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
-using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
-using center.net.Infrastructure.Identity;
-using center.net.Infrastructure.Persistence.Interceptors;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Infrastructure.Identity;
+using HumanCenterNet.Infrastructure.Persistence.Interceptors;
 using Duende.IdentityServer.EntityFramework.Options;
 using MediatR;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace center.net.Infrastructure.Persistence;
+namespace HumanCenterNet.Infrastructure.Persistence;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
 {
@@ -20,7 +20,7 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
         DbContextOptions<ApplicationDbContext> options,
         IOptions<OperationalStoreOptions> operationalStoreOptions,
         IMediator mediator,
-        AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor) 
+        AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor)
         : base(options, operationalStoreOptions)
     {
         _mediator = mediator;

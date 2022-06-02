@@ -1,4 +1,4 @@
-﻿namespace center.net.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿namespace HumanCenterNet.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public class WeatherForecast
 {

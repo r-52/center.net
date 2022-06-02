@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.Events;
+﻿namespace HumanCenterNet.Domain.Events;
 
 public class TodoItemDeletedEvent : BaseEvent
 {

@@ -1,7 +1,7 @@
-﻿using center.net.Application.Common.Models;
+﻿using HumanCenterNet.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace center.net.Infrastructure.Identity;
+namespace HumanCenterNet.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {

@@ -1,9 +1,9 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
-using center.net.Domain.Events;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Domain.Events;
 using MediatR;
 
-namespace center.net.Application.TodoItems.Commands.CreateTodoItem;
+namespace HumanCenterNet.Application.TodoItems.Commands.CreateTodoItem;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/center.net.webui'),
+      dir: require('path').join(__dirname, './coverage/HumanCenterNet.webui'),
       subdir: '.',
       reporters: [
         { type: 'html' },

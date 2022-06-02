@@ -1,8 +1,8 @@
-﻿using center.net.Domain.Entities;
+﻿using HumanCenterNet.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace center.net.Infrastructure.Persistence.Configurations;
+namespace HumanCenterNet.Infrastructure.Persistence.Configurations;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {

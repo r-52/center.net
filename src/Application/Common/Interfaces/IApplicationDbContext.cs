@@ -1,7 +1,7 @@
-﻿using center.net.Domain.Entities;
+﻿using HumanCenterNet.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.Common.Interfaces;
+namespace HumanCenterNet.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {

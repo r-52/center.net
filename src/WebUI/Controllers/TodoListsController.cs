@@ -1,12 +1,12 @@
-﻿using center.net.Application.TodoLists.Commands.CreateTodoList;
-using center.net.Application.TodoLists.Commands.DeleteTodoList;
-using center.net.Application.TodoLists.Commands.UpdateTodoList;
-using center.net.Application.TodoLists.Queries.ExportTodos;
-using center.net.Application.TodoLists.Queries.GetTodos;
+﻿using HumanCenterNet.Application.TodoLists.Commands.CreateTodoList;
+using HumanCenterNet.Application.TodoLists.Commands.DeleteTodoList;
+using HumanCenterNet.Application.TodoLists.Commands.UpdateTodoList;
+using HumanCenterNet.Application.TodoLists.Queries.ExportTodos;
+using HumanCenterNet.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace center.net.WebUI.Controllers;
+namespace HumanCenterNet.WebUI.Controllers;
 
 [Authorize]
 public class TodoListsController : ApiControllerBase

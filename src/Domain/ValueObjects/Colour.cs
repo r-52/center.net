@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.ValueObjects;
+﻿namespace HumanCenterNet.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace center.net.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+namespace HumanCenterNet.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public record GetWeatherForecastsQuery : IRequest<IEnumerable<WeatherForecast>>;
 

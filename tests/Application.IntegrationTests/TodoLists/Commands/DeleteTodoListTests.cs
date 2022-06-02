@@ -1,11 +1,11 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.TodoLists.Commands.CreateTodoList;
-using center.net.Application.TodoLists.Commands.DeleteTodoList;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.TodoLists.Commands.CreateTodoList;
+using HumanCenterNet.Application.TodoLists.Commands.DeleteTodoList;
+using HumanCenterNet.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace center.net.Application.IntegrationTests.TodoLists.Commands;
+namespace HumanCenterNet.Application.IntegrationTests.TodoLists.Commands;
 
 using static Testing;
 

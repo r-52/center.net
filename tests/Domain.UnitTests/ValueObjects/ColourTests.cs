@@ -1,9 +1,9 @@
-﻿using center.net.Domain.Exceptions;
-using center.net.Domain.ValueObjects;
+﻿using HumanCenterNet.Domain.Exceptions;
+using HumanCenterNet.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace center.net.Domain.UnitTests.ValueObjects;
+namespace HumanCenterNet.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {

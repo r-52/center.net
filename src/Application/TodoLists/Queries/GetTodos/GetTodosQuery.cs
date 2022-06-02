@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using center.net.Application.Common.Interfaces;
-using center.net.Application.Common.Security;
-using center.net.Domain.Enums;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Application.Common.Security;
+using HumanCenterNet.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.TodoLists.Queries.GetTodos;
+namespace HumanCenterNet.Application.TodoLists.Queries.GetTodos;
 
 [Authorize]
 public record GetTodosQuery : IRequest<TodosVm>;

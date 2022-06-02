@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace center.net.Application.IntegrationTests;
+namespace HumanCenterNet.Application.IntegrationTests;
 
 public static class ServiceCollectionExtensions
 {

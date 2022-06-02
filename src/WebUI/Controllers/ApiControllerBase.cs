@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace center.net.WebUI.Controllers;
+namespace HumanCenterNet.WebUI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace center.net.Application.TodoItems.Commands.UpdateTodoItem;
+namespace HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItem;
 
 public class UpdateTodoItemCommandValidator : AbstractValidator<UpdateTodoItemCommand>
 {

@@ -1,6 +1,6 @@
-﻿global using center.net.Domain.Common;
-global using center.net.Domain.Entities;
-global using center.net.Domain.Enums;
-global using center.net.Domain.Events;
-global using center.net.Domain.Exceptions;
-global using center.net.Domain.ValueObjects;
+﻿global using HumanCenterNet.Domain.Common;
+global using HumanCenterNet.Domain.Entities;
+global using HumanCenterNet.Domain.Enums;
+global using HumanCenterNet.Domain.Events;
+global using HumanCenterNet.Domain.Exceptions;
+global using HumanCenterNet.Domain.ValueObjects;

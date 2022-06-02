@@ -1,7 +1,7 @@
-﻿using center.net.Application.Common.Mappings;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Mappings;
+using HumanCenterNet.Domain.Entities;
 
-namespace center.net.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace HumanCenterNet.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class TodoItemBriefDto : IMapFrom<TodoItem>
 {

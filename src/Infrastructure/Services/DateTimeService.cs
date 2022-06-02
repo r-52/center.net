@@ -1,6 +1,6 @@
-﻿using center.net.Application.Common.Interfaces;
+﻿using HumanCenterNet.Application.Common.Interfaces;
 
-namespace center.net.Infrastructure.Services;
+namespace HumanCenterNet.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

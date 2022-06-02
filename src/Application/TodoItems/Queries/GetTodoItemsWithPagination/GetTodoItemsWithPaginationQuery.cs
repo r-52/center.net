@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using center.net.Application.Common.Interfaces;
-using center.net.Application.Common.Mappings;
-using center.net.Application.Common.Models;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Application.Common.Mappings;
+using HumanCenterNet.Application.Common.Models;
 using MediatR;
 
-namespace center.net.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace HumanCenterNet.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {

@@ -1,10 +1,10 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
-using center.net.Domain.Enums;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Domain.Enums;
 using MediatR;
 
-namespace center.net.Application.TodoItems.Commands.UpdateTodoItemDetail;
+namespace HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItemDetail;
 
 public record UpdateTodoItemDetailCommand : IRequest
 {

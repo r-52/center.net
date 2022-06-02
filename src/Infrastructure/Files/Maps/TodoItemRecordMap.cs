@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
-using center.net.Application.TodoLists.Queries.ExportTodos;
+using HumanCenterNet.Application.TodoLists.Queries.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace center.net.Infrastructure.Files.Maps;
+namespace HumanCenterNet.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {

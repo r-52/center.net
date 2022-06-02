@@ -1,13 +1,13 @@
-﻿using center.net.Application.Common.Models;
-using center.net.Application.TodoItems.Commands.CreateTodoItem;
-using center.net.Application.TodoItems.Commands.DeleteTodoItem;
-using center.net.Application.TodoItems.Commands.UpdateTodoItem;
-using center.net.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using center.net.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿using HumanCenterNet.Application.Common.Models;
+using HumanCenterNet.Application.TodoItems.Commands.CreateTodoItem;
+using HumanCenterNet.Application.TodoItems.Commands.DeleteTodoItem;
+using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItem;
+using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using HumanCenterNet.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace center.net.WebUI.Controllers;
+namespace HumanCenterNet.WebUI.Controllers;
 
 [Authorize]
 public class TodoItemsController : ApiControllerBase

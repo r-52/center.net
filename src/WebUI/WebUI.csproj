@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>center.net.WebUI</RootNamespace>
-        <AssemblyName>center.net.WebUI</AssemblyName>
+        <RootNamespace>HumanCenterNet.WebUI</RootNamespace>
+        <AssemblyName>HumanCenterNet.WebUI</AssemblyName>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <SpaRoot>ClientApp\</SpaRoot>

@@ -1,9 +1,9 @@
-﻿using center.net.Application.Common.Exceptions;
+﻿using HumanCenterNet.Application.Common.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace center.net.WebUI.Filters;
+namespace HumanCenterNet.WebUI.Filters;
 
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {

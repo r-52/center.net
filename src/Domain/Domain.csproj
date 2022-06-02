@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>center.net.Domain</RootNamespace>
-        <AssemblyName>center.net.Domain</AssemblyName>
+        <RootNamespace>HumanCenterNet.Domain</RootNamespace>
+        <AssemblyName>HumanCenterNet.Domain</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

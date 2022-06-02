@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace center.net.Application.IntegrationTests;
+namespace HumanCenterNet.Application.IntegrationTests;
 
 using static Testing;
 

@@ -1,8 +1,8 @@
-﻿using center.net.Application.Common.Interfaces;
+﻿using HumanCenterNet.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.TodoLists.Commands.UpdateTodoList;
+namespace HumanCenterNet.Application.TodoLists.Commands.UpdateTodoList;
 
 public class UpdateTodoListCommandValidator : AbstractValidator<UpdateTodoListCommand>
 {

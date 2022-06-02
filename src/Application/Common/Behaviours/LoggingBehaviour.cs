@@ -1,8 +1,8 @@
-﻿using center.net.Application.Common.Interfaces;
+﻿using HumanCenterNet.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace center.net.Application.Common.Behaviours;
+namespace HumanCenterNet.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {
@@ -28,7 +28,7 @@ public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where T
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("center.net Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation("HumanCenterNet Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, request);
     }
 }

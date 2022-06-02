@@ -1,7 +1,7 @@
-﻿using center.net.Application.Common.Mappings;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Mappings;
+using HumanCenterNet.Domain.Entities;
 
-namespace center.net.Application.TodoLists.Queries.GetTodos;
+namespace HumanCenterNet.Application.TodoLists.Queries.GetTodos;
 
 public class TodoListDto : IMapFrom<TodoList>
 {

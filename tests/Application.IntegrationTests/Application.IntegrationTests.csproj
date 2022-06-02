@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>center.net.Application.IntegrationTests</RootNamespace>
-        <AssemblyName>center.net.Application.IntegrationTests</AssemblyName>
+        <RootNamespace>HumanCenterNet.Application.IntegrationTests</RootNamespace>
+        <AssemblyName>HumanCenterNet.Application.IntegrationTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

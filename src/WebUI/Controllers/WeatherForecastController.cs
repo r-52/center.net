@@ -1,7 +1,7 @@
-﻿using center.net.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿using HumanCenterNet.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace center.net.WebUI.Controllers;
+namespace HumanCenterNet.WebUI.Controllers;
 
 public class WeatherForecastController : ApiControllerBase
 {

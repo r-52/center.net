@@ -1,8 +1,8 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
 using MediatR;
 
-namespace center.net.Application.TodoLists.Commands.CreateTodoList;
+namespace HumanCenterNet.Application.TodoLists.Commands.CreateTodoList;
 
 public record CreateTodoListCommand : IRequest<int>
 {

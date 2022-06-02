@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>center.net.Domain.UnitTests</RootNamespace>
-        <AssemblyName>center.net.Domain.UnitTests</AssemblyName>
+        <RootNamespace>HumanCenterNet.Domain.UnitTests</RootNamespace>
+        <AssemblyName>HumanCenterNet.Domain.UnitTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

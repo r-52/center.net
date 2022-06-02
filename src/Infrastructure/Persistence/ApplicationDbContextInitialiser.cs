@@ -1,10 +1,10 @@
-﻿using center.net.Domain.Entities;
-using center.net.Infrastructure.Identity;
+﻿using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace center.net.Infrastructure.Persistence;
+namespace HumanCenterNet.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {

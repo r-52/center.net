@@ -1,8 +1,8 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Application.Common.Security;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Application.Common.Security;
 using MediatR;
 
-namespace center.net.Application.TodoLists.Commands.PurgeTodoLists;
+namespace HumanCenterNet.Application.TodoLists.Commands.PurgeTodoLists;
 
 [Authorize(Roles = "Administrator")]
 [Authorize(Policy = "CanPurge")]

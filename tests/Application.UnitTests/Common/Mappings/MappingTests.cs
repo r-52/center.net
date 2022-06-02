@@ -1,12 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using AutoMapper;
-using center.net.Application.Common.Mappings;
-using center.net.Application.Common.Models;
-using center.net.Application.TodoLists.Queries.GetTodos;
-using center.net.Domain.Entities;
+using HumanCenterNet.Application.Common.Mappings;
+using HumanCenterNet.Application.Common.Models;
+using HumanCenterNet.Application.TodoLists.Queries.GetTodos;
+using HumanCenterNet.Domain.Entities;
 using NUnit.Framework;
 
-namespace center.net.Application.UnitTests.Common.Mappings;
+namespace HumanCenterNet.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {
@@ -15,7 +15,7 @@ public class MappingTests
 
     public MappingTests()
     {
-        _configuration = new MapperConfiguration(config => 
+        _configuration = new MapperConfiguration(config =>
             config.AddProfile<MappingProfile>());
 
         _mapper = _configuration.CreateMapper();

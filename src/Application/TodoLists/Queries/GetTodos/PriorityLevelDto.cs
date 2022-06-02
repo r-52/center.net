@@ -1,4 +1,4 @@
-﻿namespace center.net.Application.TodoLists.Queries.GetTodos;
+﻿namespace HumanCenterNet.Application.TodoLists.Queries.GetTodos;
 
 public class PriorityLevelDto
 {

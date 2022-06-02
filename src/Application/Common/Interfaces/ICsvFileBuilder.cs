@@ -1,6 +1,6 @@
-﻿using center.net.Application.TodoLists.Queries.ExportTodos;
+﻿using HumanCenterNet.Application.TodoLists.Queries.ExportTodos;
 
-namespace center.net.Application.Common.Interfaces;
+namespace HumanCenterNet.Application.Common.Interfaces;
 
 public interface ICsvFileBuilder
 {

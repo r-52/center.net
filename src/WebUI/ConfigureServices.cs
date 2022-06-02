@@ -1,7 +1,7 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Infrastructure.Persistence;
-using center.net.WebUI.Filters;
-using center.net.WebUI.Services;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Infrastructure.Persistence;
+using HumanCenterNet.WebUI.Filters;
+using HumanCenterNet.WebUI.Services;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
@@ -34,7 +34,7 @@ public static class ConfigureServices
 
         services.AddOpenApiDocument(configure =>
         {
-            configure.Title = "center.net API";
+            configure.Title = "HumanCenterNet API";
             configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
             {
                 Type = OpenApiSecuritySchemeType.ApiKey,

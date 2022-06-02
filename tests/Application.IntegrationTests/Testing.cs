@@ -1,5 +1,5 @@
-﻿using center.net.Infrastructure.Identity;
-using center.net.Infrastructure.Persistence;
+﻿using HumanCenterNet.Infrastructure.Identity;
+using HumanCenterNet.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Respawn;
 
-namespace center.net.Application.IntegrationTests;
+namespace HumanCenterNet.Application.IntegrationTests;
 
 [SetUpFixture]
 public partial class Testing

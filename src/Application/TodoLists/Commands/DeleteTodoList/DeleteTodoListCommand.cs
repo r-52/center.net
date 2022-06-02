@@ -1,10 +1,10 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.TodoLists.Commands.DeleteTodoList;
+namespace HumanCenterNet.Application.TodoLists.Commands.DeleteTodoList;
 
 public record DeleteTodoListCommand(int Id) : IRequest;
 

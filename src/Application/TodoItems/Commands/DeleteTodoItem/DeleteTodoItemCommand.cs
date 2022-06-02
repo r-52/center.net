@@ -1,10 +1,10 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.Common.Interfaces;
-using center.net.Domain.Entities;
-using center.net.Domain.Events;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Domain.Events;
 using MediatR;
 
-namespace center.net.Application.TodoItems.Commands.DeleteTodoItem;
+namespace HumanCenterNet.Application.TodoItems.Commands.DeleteTodoItem;
 
 public record DeleteTodoItemCommand(int Id) : IRequest;
 

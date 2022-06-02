@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.Exceptions;
+﻿namespace HumanCenterNet.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {

@@ -1,9 +1,9 @@
-﻿using center.net.Application.Common.Exceptions;
+﻿using HumanCenterNet.Application.Common.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;
 
-namespace center.net.Application.UnitTests.Common.Exceptions;
+namespace HumanCenterNet.Application.UnitTests.Common.Exceptions;
 
 public class ValidationExceptionTests
 {

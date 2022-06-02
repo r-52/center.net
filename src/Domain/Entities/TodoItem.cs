@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.Entities;
+﻿namespace HumanCenterNet.Domain.Entities;
 
 public class TodoItem : BaseAuditableEntity
 {

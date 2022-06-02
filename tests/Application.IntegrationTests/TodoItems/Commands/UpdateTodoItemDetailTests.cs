@@ -1,14 +1,14 @@
-﻿using center.net.Application.Common.Exceptions;
-using center.net.Application.TodoItems.Commands.CreateTodoItem;
-using center.net.Application.TodoItems.Commands.UpdateTodoItem;
-using center.net.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using center.net.Application.TodoLists.Commands.CreateTodoList;
-using center.net.Domain.Entities;
-using center.net.Domain.Enums;
+﻿using HumanCenterNet.Application.Common.Exceptions;
+using HumanCenterNet.Application.TodoItems.Commands.CreateTodoItem;
+using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItem;
+using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using HumanCenterNet.Application.TodoLists.Commands.CreateTodoList;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Domain.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace center.net.Application.IntegrationTests.TodoItems.Commands;
+namespace HumanCenterNet.Application.IntegrationTests.TodoItems.Commands;
 
 using static Testing;
 

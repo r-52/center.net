@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using center.net.Application.Common.Models;
+using HumanCenterNet.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace center.net.Application.Common.Mappings;
+namespace HumanCenterNet.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

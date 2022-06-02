@@ -1,5 +1,5 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Infrastructure.Persistence;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace center.net.Application.IntegrationTests;
+namespace HumanCenterNet.Application.IntegrationTests;
 
 using static Testing;
 

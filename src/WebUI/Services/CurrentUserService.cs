@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
 
-using center.net.Application.Common.Interfaces;
+using HumanCenterNet.Application.Common.Interfaces;
 
-namespace center.net.WebUI.Services;
+namespace HumanCenterNet.WebUI.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

@@ -1,4 +1,4 @@
-﻿namespace center.net.Application.Common.Exceptions;
+﻿namespace HumanCenterNet.Application.Common.Exceptions;
 
 public class ForbiddenAccessException : Exception
 {

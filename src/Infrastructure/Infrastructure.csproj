@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>center.net.Infrastructure</RootNamespace>
-        <AssemblyName>center.net.Infrastructure</AssemblyName>
+        <RootNamespace>HumanCenterNet.Infrastructure</RootNamespace>
+        <AssemblyName>HumanCenterNet.Infrastructure</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

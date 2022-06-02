@@ -1,4 +1,4 @@
-﻿namespace center.net.Domain.Common;
+﻿namespace HumanCenterNet.Domain.Common;
 
 public abstract class BaseAuditableEntity : BaseEntity
 {

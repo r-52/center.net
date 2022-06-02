@@ -1,10 +1,10 @@
-﻿using center.net.Application.TodoLists.Queries.GetTodos;
-using center.net.Domain.Entities;
-using center.net.Domain.ValueObjects;
+﻿using HumanCenterNet.Application.TodoLists.Queries.GetTodos;
+using HumanCenterNet.Domain.Entities;
+using HumanCenterNet.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace center.net.Application.IntegrationTests.TodoLists.Queries;
+namespace HumanCenterNet.Application.IntegrationTests.TodoLists.Queries;
 
 using static Testing;
 
@@ -57,7 +57,7 @@ public class GetTodosTests : BaseTestFixture
         var query = new GetTodosQuery();
 
         var action = () => SendAsync(query);
-        
+
         await action.Should().ThrowAsync<UnauthorizedAccessException>();
     }
 }

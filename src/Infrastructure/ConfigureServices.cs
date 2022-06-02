@@ -1,9 +1,9 @@
-﻿using center.net.Application.Common.Interfaces;
-using center.net.Infrastructure.Files;
-using center.net.Infrastructure.Identity;
-using center.net.Infrastructure.Persistence;
-using center.net.Infrastructure.Persistence.Interceptors;
-using center.net.Infrastructure.Services;
+﻿using HumanCenterNet.Application.Common.Interfaces;
+using HumanCenterNet.Infrastructure.Files;
+using HumanCenterNet.Infrastructure.Identity;
+using HumanCenterNet.Infrastructure.Persistence;
+using HumanCenterNet.Infrastructure.Persistence.Interceptors;
+using HumanCenterNet.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +20,7 @@ public static class ConfigureServices
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("center.netDb"));
+                options.UseInMemoryDatabase("HumanCenterNetDb"));
         }
         else
         {

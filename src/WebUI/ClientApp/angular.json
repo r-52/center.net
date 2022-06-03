@@ -132,5 +132,7 @@
       }
     }
   },
-  "defaultProject": "HumanCenterNet.WebUI"
+  "cli": {
+    "analytics": false
+  }
 }

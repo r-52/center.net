@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HumanCenterNet.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220606184851_AddApplicationFields")]
+    [Migration("20220606190132_AddApplicationFields")]
     partial class AddApplicationFields
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

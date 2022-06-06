@@ -38,6 +38,14 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label":"remove debug db",
+            "command": "rm",
+            "type": "shell",
+            "args": [
+                "${workspaceFolder}/src/WebUI/bin/Debug/net6.0/center_dev.db"
+            ]
+        },
+        {
             "label": "migration",
             "command": "dotnet",
             "type": "shell",

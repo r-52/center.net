@@ -51,7 +51,9 @@
                 "--output-dir",
                 "${workspaceFolder}/src/Infrastructure/Persistence/Migrations",
                 "-p",
-                "${workspaceFolder}/src/Infrastructure/Infrastructure.csproj"
+                "${workspaceFolder}/src/Infrastructure/Infrastructure.csproj",
+                "--context",
+                "ApplicationDbContext"
             ]
         }
     ],

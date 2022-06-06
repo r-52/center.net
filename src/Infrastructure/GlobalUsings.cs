@@ -1,0 +1,17 @@
+global using Microsoft.AspNetCore.Identity;
+global using HumanCenterNet.Application.Common.Interfaces;
+global using HumanCenterNet.Application.Common.Interfaces.Db;
+global using HumanCenterNet.Application.Common.Models;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.EntityFrameworkCore;
+global using System.Reflection;
+global using HumanCenterNet.Domain.Entities;
+global using HumanCenterNet.Infrastructure.Identity;
+global using HumanCenterNet.Infrastructure.Persistence.Interceptors;
+global using Duende.IdentityServer.EntityFramework.Options;
+global using MediatR;
+global using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+global using Microsoft.Extensions.Options;
+global using Microsoft.Extensions.DependencyInjection;
+global using HumanCenterNet.Infrastructure.Files;
+global using HumanCenterNet.Infrastructure.Services.Db;

@@ -1,35 +1,24 @@
-﻿using System.Reflection;
-using HumanCenterNet.Application.Common.Interfaces;
-using HumanCenterNet.Domain.Entities;
-using HumanCenterNet.Infrastructure.Identity;
-using HumanCenterNet.Infrastructure.Persistence.Interceptors;
-using Duende.IdentityServer.EntityFramework.Options;
-using MediatR;
-using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-
 namespace HumanCenterNet.Infrastructure.Persistence;
 
-public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
+public class BaseDbContext : ApiAuthorizationDbContext<ApplicationUser>, IBaseDbContext
 {
-    private readonly IMediator _mediator;
-    private readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
+    protected readonly IMediator _mediator;
+    protected readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
 
-    public ApplicationDbContext(
+    protected readonly ISqliteDatabaseFilePathService _sqliteFilePathService;
+
+    public BaseDbContext(
         DbContextOptions<ApplicationDbContext> options,
         IOptions<OperationalStoreOptions> operationalStoreOptions,
+        ISqliteDatabaseFilePathService filePathService,
         IMediator mediator,
         AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor)
         : base(options, operationalStoreOptions)
     {
         _mediator = mediator;
+        _sqliteFilePathService = filePathService;
         _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
     }
-
-    public DbSet<TodoList> TodoLists => Set<TodoList>();
-
-    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -41,6 +30,7 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.AddInterceptors(_auditableEntitySaveChangesInterceptor);
+        optionsBuilder.UseSqlite($"Data Source={this._sqliteFilePathService.GetFilePathForSqliteDatabase()}");
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

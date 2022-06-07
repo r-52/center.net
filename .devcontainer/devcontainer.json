@@ -18,7 +18,11 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-dotnettools.csharp"
+		"ms-dotnettools.csharp",
+		"eamodio.gitlens",
+		"qwtel.sqlite-viewer",
+		"rvest.vs-code-prettier-eslint",
+		"dbaeumer.vscode-eslint"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

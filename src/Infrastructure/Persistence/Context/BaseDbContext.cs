@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Configuration;
+
 namespace HumanCenterNet.Infrastructure.Persistence;
 
 public class BaseDbContext : ApiAuthorizationDbContext<ApplicationUser>, IBaseDbContext
@@ -5,18 +7,19 @@ public class BaseDbContext : ApiAuthorizationDbContext<ApplicationUser>, IBaseDb
     protected readonly IMediator _mediator;
     protected readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
 
-    protected readonly ISqliteDatabaseFilePathService _sqliteFilePathService;
+
+    protected readonly IConfiguration _configuration;
 
     public BaseDbContext(
         DbContextOptions<ApplicationDbContext> options,
+        IConfiguration configuration,
         IOptions<OperationalStoreOptions> operationalStoreOptions,
-        ISqliteDatabaseFilePathService filePathService,
         IMediator mediator,
         AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor)
         : base(options, operationalStoreOptions)
     {
         _mediator = mediator;
-        _sqliteFilePathService = filePathService;
+        _configuration = configuration;
         _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
     }
 
@@ -30,7 +33,12 @@ public class BaseDbContext : ApiAuthorizationDbContext<ApplicationUser>, IBaseDb
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.AddInterceptors(_auditableEntitySaveChangesInterceptor);
-        optionsBuilder.UseSqlite($"Data Source={this._sqliteFilePathService.GetFilePathForSqliteDatabase()}");
+#if DEBUG
+        optionsBuilder.EnableSensitiveDataLogging(true);
+        optionsBuilder.EnableDetailedErrors(true);
+#endif
+        var connectionString = _configuration.GetConnectionString("Sqlite");
+        optionsBuilder.UseSqlite(connectionString);
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

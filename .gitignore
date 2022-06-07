@@ -857,3 +857,11 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,osx,jetbrains+all,aspnetcore,csharp,visualstudiocode,dotnetcore,angular,node
+
+
+
+# custom
+*.db
+*.db-shm
+*.db-wal
+#end custom

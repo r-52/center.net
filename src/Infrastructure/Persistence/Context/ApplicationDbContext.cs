@@ -1,8 +1,10 @@
-﻿namespace HumanCenterNet.Infrastructure.Persistence;
+﻿using Microsoft.Extensions.Configuration;
+
+namespace HumanCenterNet.Infrastructure.Persistence;
 
 public class ApplicationDbContext : BaseDbContext, IApplicationDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IOptions<OperationalStoreOptions> operationalStoreOptions, ISqliteDatabaseFilePathService filePathService, IMediator mediator, AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor) : base(options, operationalStoreOptions, filePathService, mediator, auditableEntitySaveChangesInterceptor)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IConfiguration configuration, IOptions<OperationalStoreOptions> operationalStoreOptions, IMediator mediator, AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor) : base(options, configuration, operationalStoreOptions, mediator, auditableEntitySaveChangesInterceptor)
     {
     }
 

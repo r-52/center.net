@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TimeTrackingRoutingModule } from './time-tracking-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    TimeTrackingRoutingModule
-  ]
+  imports: [CommonModule, TimeTrackingRoutingModule],
 })
-export class TimeTrackingModule { }
+export class TimeTrackingModule {}

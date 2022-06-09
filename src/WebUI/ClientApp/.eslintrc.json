@@ -1,11 +1,17 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parserOptions": {
-        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "project": [
+          "tsconfig.app.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -13,19 +19,74 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended"
       ],
-      "rules": {}
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {}
-    },
-    {
-      "files": ["*.html"],
-      "excludedFiles": ["*inline-template-*.component.html"],
-      "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "prettier/prettier": ["error", { "parser": "angular" }]
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error"
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+          "error"
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          { "selector": "variableLike", "format": ["camelCase"] },
+          {
+            "selector": "variable",
+            "types": ["boolean"],
+            "format": ["PascalCase"],
+            "prefix": ["is", "should", "has", "can", "did", "will"]
+          },
+          {
+            "selector": "memberLike",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "interface",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": true
+            }
+          }
+        ],
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array"
+          }
+        ],
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/member-ordering": "error"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "parser": "angular"
+          }
+        ]
       }
     }
   ]

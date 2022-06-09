@@ -13,28 +13,31 @@ import { mergeMap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthorizeInterceptor implements HttpInterceptor {
-  constructor(private authorize: AuthorizeService) {}
+  public constructor(private _authorize: AuthorizeService) {}
 
-  intercept(
+  public intercept(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     req: HttpRequest<any>,
     next: HttpHandler
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Observable<HttpEvent<any>> {
-    return this.authorize
+    return this._authorize
       .getAccessToken()
       .pipe(
-        mergeMap((token) => this.processRequestWithToken(token, req, next))
+        mergeMap((token) => this._processRequestWithToken(token, req, next))
       );
   }
 
   // Checks if there is an access_token available in the authorize service
   // and adds it to the request in case it's targeted at the same origin as the
   // single page application.
-  private processRequestWithToken(
+  private _processRequestWithToken(
     token: string | null,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     req: HttpRequest<any>,
     next: HttpHandler
   ) {
-    if (!!token && this.isSameOriginUrl(req)) {
+    if (!!token && this._isSameOriginUrl(req)) {
       req = req.clone({
         setHeaders: {
           Authorization: `Bearer ${token}`,
@@ -45,7 +48,8 @@ export class AuthorizeInterceptor implements HttpInterceptor {
     return next.handle(req);
   }
 
-  private isSameOriginUrl(req: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private _isSameOriginUrl(req: any) {
     // It's an absolute url with the same origin.
     if (req.url.startsWith(`${window.location.origin}/`)) {
       return true;

@@ -44,6 +44,7 @@
     "@angular-eslint/template-parser": "14.0.0-alpha.0",
     "@angular/cli": "^14.0.0",
     "@angular/compiler-cli": "^14.0.0",
+    "@angular/localize": "^14.0.0",
     "@types/eslint": "^8.4.2",
     "@types/eslint-scope": "^3.7.3",
     "@types/jasmine": "~3.6.0",

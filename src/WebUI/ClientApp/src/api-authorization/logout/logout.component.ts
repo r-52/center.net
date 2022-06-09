@@ -23,18 +23,18 @@ import {
 export class LogoutComponent implements OnInit {
   public message = new BehaviorSubject<string | null>(null);
 
-  constructor(
-    private authorizeService: AuthorizeService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
+  public constructor(
+    private _authorizeService: AuthorizeService,
+    private _activatedRoute: ActivatedRoute,
+    private _router: Router
   ) {}
 
-  async ngOnInit() {
-    const action = this.activatedRoute.snapshot.url[1];
+  public async ngOnInit() {
+    const action = this._activatedRoute.snapshot.url[1];
     switch (action.path) {
       case LogoutActions.Logout:
         if (!!window.history.state.local) {
-          await this.logout(this.getReturnUrl());
+          await this._logout(this._getReturnUrl());
         } else {
           // This prevents regular links to <app>/authentication/logout from triggering a logout
           this.message.next(
@@ -44,7 +44,7 @@ export class LogoutComponent implements OnInit {
 
         break;
       case LogoutActions.LogoutCallback:
-        await this.processLogoutCallback();
+        await this._processLogoutCallback();
         break;
       case LogoutActions.LoggedOut:
         this.message.next('You successfully logged out!');
@@ -54,19 +54,19 @@ export class LogoutComponent implements OnInit {
     }
   }
 
-  private async logout(returnUrl: string): Promise<void> {
+  private async _logout(returnUrl: string): Promise<void> {
     const state: INavigationState = { returnUrl };
-    const isauthenticated = await this.authorizeService
+    const isAuthenticated = await this._authorizeService
       .isAuthenticated()
       .pipe(take(1))
       .toPromise();
-    if (isauthenticated) {
-      const result = await this.authorizeService.signOut(state);
+    if (isAuthenticated) {
+      const result = await this._authorizeService.signOut(state);
       switch (result.status) {
         case AuthenticationResultStatus.Redirect:
           break;
         case AuthenticationResultStatus.Success:
-          await this.navigateToReturnUrl(returnUrl);
+          await this._navigateToReturnUrl(returnUrl);
           break;
         case AuthenticationResultStatus.Fail:
           this.message.next(result.message);
@@ -79,16 +79,16 @@ export class LogoutComponent implements OnInit {
     }
   }
 
-  private async processLogoutCallback(): Promise<void> {
+  private async _processLogoutCallback(): Promise<void> {
     const url = window.location.href;
-    const result = await this.authorizeService.completeSignOut(url);
+    const result = await this._authorizeService.completeSignOut(url);
     switch (result.status) {
       case AuthenticationResultStatus.Redirect:
         // There should not be any redirects as the only time completeAuthentication finishes
         // is when we are doing a redirect sign in flow.
         throw new Error('Should not redirect.');
       case AuthenticationResultStatus.Success:
-        await this.navigateToReturnUrl(this.getReturnUrl(result.state));
+        await this._navigateToReturnUrl(this._getReturnUrl(result.state));
         break;
       case AuthenticationResultStatus.Fail:
         this.message.next(result.message);
@@ -98,15 +98,15 @@ export class LogoutComponent implements OnInit {
     }
   }
 
-  private async navigateToReturnUrl(returnUrl: string) {
-    await this.router.navigateByUrl(returnUrl, {
+  private async _navigateToReturnUrl(returnUrl: string) {
+    await this._router.navigateByUrl(returnUrl, {
       replaceUrl: true,
     });
   }
 
-  private getReturnUrl(state?: INavigationState): string {
+  private _getReturnUrl(state?: INavigationState): string {
     const fromQuery = (
-      this.activatedRoute.snapshot.queryParams as INavigationState
+      this._activatedRoute.snapshot.queryParams as INavigationState
     ).returnUrl;
     // If the url is coming from the query string, check that is either
     // a relative url or an absolute url

@@ -10,7 +10,7 @@ export class ToolbarComponent extends BaseComponent implements OnInit {
   @Output()
   public openNavbar: EventEmitter<void> = new EventEmitter();
 
-  constructor() {
+  public constructor() {
     super();
   }
 

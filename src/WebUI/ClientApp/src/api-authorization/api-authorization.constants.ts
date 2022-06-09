@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export const ApplicationName = 'HumanCenterNet.WebUI';
 
 export const ReturnUrlType = 'returnUrl';

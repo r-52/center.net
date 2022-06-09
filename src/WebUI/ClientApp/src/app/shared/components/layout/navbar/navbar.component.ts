@@ -15,20 +15,23 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent extends BaseComponent implements OnInit {
+  @ViewChild(MatSidenav)
+  public sideNav!: MatSidenav;
+
   @Input()
   public isNavbarOpen: boolean = false;
 
   public mobileQuery!: MediaQueryList;
 
-  @ViewChild(MatSidenav)
-  public sideNav!: MatSidenav;
-
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  public constructor(
+    private readonly _changeDetectorRef: ChangeDetectorRef,
+    private readonly _media: MediaMatcher
+  ) {
     super();
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery = _media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 

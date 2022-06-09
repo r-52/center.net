@@ -7,34 +7,30 @@ export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   {
     path: 'cms',
-    loadChildren: () =>
-      import('./cms/cms-routing.module').then((x) => x.CmsRoutingModule),
+    loadChildren: () => import('./cms/cms.module').then((x) => x.CmsModule),
   },
   {
     path: 'hr',
-    loadChildren: () =>
-      import('./hr/hr-routing.module').then((x) => x.HrRoutingModule),
+    loadChildren: () => import('./hr/hr.module').then((x) => x.HrModule),
   },
   {
     path: 'tenant-admin',
     loadChildren: () =>
-      import('./tenant-admin/tenant-admin-routing.module').then(
-        (x) => x.TenantAdminRoutingModule
+      import('./tenant-admin/tenant-admin.module').then(
+        (x) => x.TenantAdminModule
       ),
   },
   {
     path: 'time-tracking',
     loadChildren: () =>
-      import('./time-tracking/time-tracking-routing.module').then(
-        (x) => x.TimeTrackingRoutingModule
+      import('./time-tracking/time-tracking.module').then(
+        (x) => x.TimeTrackingModule
       ),
   },
   {
     path: 'profile',
     loadChildren: () =>
-      import('./profile/profile-routing.module').then(
-        (x) => x.ProfileRoutingModule
-      ),
+      import('./profile/profile.module').then((x) => x.ProfileModule),
   },
 ];
 

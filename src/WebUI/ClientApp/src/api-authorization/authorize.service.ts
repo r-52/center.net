@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { User, UserManager } from 'oidc-client';
 import { BehaviorSubject, concat, from, Observable } from 'rxjs';
@@ -58,7 +60,7 @@ export class AuthorizeService {
         take(1),
         filter((u) => !!u)
       ),
-      this.getUserFromStorage().pipe(
+      this._getUserFromStorage().pipe(
         filter((u) => !!u),
         tap((u) => this.userSubject.next(u))
       ),
@@ -208,7 +210,7 @@ export class AuthorizeService {
     });
   }
 
-  private getUserFromStorage(): Observable<IUser | null> {
+  private _getUserFromStorage(): Observable<IUser | null> {
     return from(this.ensureUserManagerInitialized()).pipe(
       mergeMap(() => this.userManager!.getUser()),
       map((u) => u && u.profile)

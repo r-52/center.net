@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TenantAdminRoutingModule } from './tenant-admin-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    TenantAdminRoutingModule
-  ]
+  imports: [CommonModule, TenantAdminRoutingModule],
 })
-export class TenantAdminModule { }
+export class TenantAdminModule {}

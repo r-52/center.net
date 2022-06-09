@@ -9,13 +9,13 @@ import { Subscription } from 'rxjs';
 export class BaseComponent implements OnInit, OnDestroy {
   protected subscriptions: Subscription[] = [];
 
-  constructor() {}
+  public constructor() {}
 
   public ngOnInit(): void {
     this.onPreInit();
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.onPreUnsubscribe();
     for (const sub of this.subscriptions) {
       sub.unsubscribe();

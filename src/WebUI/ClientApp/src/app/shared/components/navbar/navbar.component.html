@@ -1,0 +1,22 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <app-toolbar (openNavbar)="onToggleSidebar()"></app-toolbar>
+
+  <mat-sidenav-container
+    class="sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+  >
+    <mat-sidenav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        <a>TEST</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

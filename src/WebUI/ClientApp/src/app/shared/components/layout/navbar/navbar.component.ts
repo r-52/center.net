@@ -6,7 +6,7 @@ import {
   ViewChild,
   ViewRef,
 } from '@angular/core';
-import { BaseComponent } from '../base/base.component';
+import { BaseComponent } from '../../base/base.component';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 @Component({

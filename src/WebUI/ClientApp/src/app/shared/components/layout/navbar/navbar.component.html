@@ -12,10 +12,32 @@
       [opened]="!mobileQuery.matches"
     >
       <mat-nav-list>
-        <div class="uppercase-text" i18n mat-subheader>Time Tracking</div>
-        <div class="uppercase-text" i18n mat-subheader>CMS</div>
-        <div class="uppercase-text" i18n mat-subheader>HR</div>
-        <div class="uppercase-text" i18n mat-subheader>Admin</div>
+        <div class="uppercase-text" i18n mat-subheader>
+          <mat-icon>home</mat-icon>&nbsp;Home
+        </div>
+        <mat-list-item>
+          <div mat-line i18n>Dashboard</div>
+        </mat-list-item>
+
+        <div class="uppercase-text" i18n mat-subheader>
+          <mat-icon>schedule</mat-icon>&nbsp;Time Tracking
+        </div>
+        <mat-list-item>
+          <div mat-line i18n>Add Time</div>
+        </mat-list-item>
+        <mat-list-item>
+          <div mat-line i18n>Tracked Times</div>
+        </mat-list-item>
+        <div class="uppercase-text" i18n mat-subheader>
+          <mat-icon>app_registration</mat-icon>&nbsp;CMS
+        </div>
+        <div class="uppercase-text" i18n mat-subheader>
+          <mat-icon>badge</mat-icon>&nbsp;HR
+        </div>
+        <div class="uppercase-text" i18n mat-subheader>
+          <mat-icon>settings</mat-icon>
+          &nbsp;Admin
+        </div>
       </mat-nav-list>
     </mat-sidenav>
 

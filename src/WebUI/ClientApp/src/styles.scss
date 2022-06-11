@@ -1,3 +1,7 @@
+@use "./styles/layout";
+@use "./styles/typo";
+@use "./styles/theme";
+@use "./styles/variables";
 
 html,
 body {
@@ -7,6 +11,3 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-@import "./styles/layout";
-@import "./styles/typo";

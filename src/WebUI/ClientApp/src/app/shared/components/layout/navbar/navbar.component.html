@@ -3,12 +3,12 @@
 
   <mat-sidenav-container
     class="sidenav-container"
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+    [style.marginTop.px]="mobileQuery.matches ? 64 : 0"
   >
     <mat-sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches"
-      fixedTopGap="56"
+      [fixedInViewport]="!mobileQuery.matches"
+      fixedTopGap="64"
       [opened]="!mobileQuery.matches"
     >
       <mat-nav-list>
@@ -16,17 +16,38 @@
           <mat-icon>home</mat-icon>&nbsp;Home
         </div>
         <mat-list-item>
-          <div mat-line i18n>Dashboard</div>
+          <a
+            routerLink="/"
+            routerLinkActive="list-item-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            mat-line
+            i18n
+            >Dashboard</a
+          >
         </mat-list-item>
 
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>schedule</mat-icon>&nbsp;Time Tracking
         </div>
         <mat-list-item>
-          <div mat-line i18n>Add Time</div>
+          <a
+            routerLink="/time-tracking/new"
+            routerLinkActive="list-item-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            mat-line
+            i18n
+            >Add Time</a
+          >
         </mat-list-item>
         <mat-list-item>
-          <div mat-line i18n>Tracked Times</div>
+          <a
+            routerLink="/"
+            routerLinkActive="list-item-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            mat-line
+            i18n
+            >History</a
+          >
         </mat-list-item>
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>app_registration</mat-icon>&nbsp;CMS

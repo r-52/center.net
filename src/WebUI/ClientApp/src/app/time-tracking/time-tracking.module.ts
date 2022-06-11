@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { AddNewTimeTrackComponent } from './add-new-time-track/add-new-time-track.component';
 import { HistoryListComponent } from './history/history-list/history-list.component';
 import { HistoryDetailComponent } from './history/history-detail/history-detail.component';
+import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,12 @@ import { HistoryDetailComponent } from './history/history-detail/history-detail.
     HistoryListComponent,
     HistoryDetailComponent,
   ],
-  imports: [CommonModule, TimeTrackingRoutingModule, RouterModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    SharedModule,
+    TimeTrackingRoutingModule,
+    RouterModule,
+  ],
 })
 export class TimeTrackingModule {}

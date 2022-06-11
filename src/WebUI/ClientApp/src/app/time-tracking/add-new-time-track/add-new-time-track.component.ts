@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseComponent } from 'src/app/shared/components/base/base.component';
 
 @Component({
   selector: 'app-add-new-time-track',
   templateUrl: './add-new-time-track.component.html',
-  styleUrls: ['./add-new-time-track.component.scss']
+  styleUrls: ['./add-new-time-track.component.scss'],
 })
-export class AddNewTimeTrackComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class AddNewTimeTrackComponent extends BaseComponent implements OnInit {
+  public constructor() {
+    super();
   }
 
+  public ngOnInit(): void {
+    super.ngOnInit();
+  }
 }

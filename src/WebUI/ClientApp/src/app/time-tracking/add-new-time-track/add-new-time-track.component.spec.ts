@@ -8,9 +8,8 @@ describe('AddNewTimeTrackComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddNewTimeTrackComponent ]
-    })
-    .compileComponents();
+      declarations: [AddNewTimeTrackComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AddNewTimeTrackComponent);
     component = fixture.componentInstance;

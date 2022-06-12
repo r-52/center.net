@@ -3,7 +3,7 @@ const { paths } = require('./tsconfig.json').compilerOptions;
 
 // eslint-disable-next-line no-undef
 globalThis.ngJest = {
-  skipNgcc: false,
+  skipNgcc: true,
   tsconfig: 'tsconfig.spec.json',
 };
 
@@ -11,6 +11,6 @@ globalThis.ngJest = {
 module.exports = {
   preset: 'jest-preset-angular',
   globalSetup: 'jest-preset-angular/global-setup',
-  moduleNameMapper: pathsToModuleNameMapper(paths, { prefix: '<rootDir>' }),
+  moduleNameMapper: pathsToModuleNameMapper(paths ?? {}, { prefix: '<rootDir>' }),
   setupFilesAfterEnv: ['<rootDir>/setupJest.ts'],
 };

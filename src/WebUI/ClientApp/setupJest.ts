@@ -33,3 +33,5 @@ Object.defineProperty(document.body.style, 'transform', {
     configurable: true,
   }),
 });
+
+import '@angular/localize/init';

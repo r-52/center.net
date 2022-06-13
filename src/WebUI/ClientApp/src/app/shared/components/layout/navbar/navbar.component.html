@@ -1,4 +1,7 @@
-<div class="container" [class.is-mobile]="mobileQuery.matches">
+<div
+  class="container-fluid container-no-padding"
+  [class.is-mobile]="mobileQuery.matches"
+>
   <app-toolbar (openNavbar)="onToggleSidebar()"></app-toolbar>
 
   <mat-sidenav-container

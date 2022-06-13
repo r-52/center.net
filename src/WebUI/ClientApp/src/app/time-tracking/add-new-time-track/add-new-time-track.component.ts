@@ -11,7 +11,13 @@ export class AddNewTimeTrackComponent extends BaseComponent implements OnInit {
     super();
   }
 
+  //#region lifecycle
   public ngOnInit(): void {
     super.ngOnInit();
   }
+  //#endregion
+
+  //#region event handler
+  public loadData(): void {}
+  //#endregion
 }

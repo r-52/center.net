@@ -1,1 +1,14 @@
-<app-calendar-week-datepicker></app-calendar-week-datepicker>
+<app-module-header i18n>Add new entry</app-module-header>
+
+<app-control-header i18n>Daterange</app-control-header>
+
+<div class="row align-items-baseline mb-3">
+  <div class="col">
+    <app-calendar-week-datepicker></app-calendar-week-datepicker>
+  </div>
+  <div class="col">
+    <app-refresh-button (refresh)="loadData()"></app-refresh-button>
+  </div>
+</div>
+
+<app-control-header i18n>Selected work week</app-control-header>

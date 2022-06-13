@@ -13,4 +13,11 @@ describe('DateToCalendarWeekResolverService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should resolve the default date (now) to a list', () => {
+    const defaultList = service.resolveDate();
+    expect(defaultList.length).toEqual(7);
+  });
+
+  it('should resolve a custom date to a list', () => {});
 });

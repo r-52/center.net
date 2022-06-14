@@ -160,6 +160,10 @@ export class CalendarWeekDatepickerComponent
       const result = this._calendarWeekResolverService.resolveDate();
       this.startDateToDisplay = result[0];
       this.endDateToDisplay = result[6];
+      this.finshedDateSelection.emit({
+        startDate: this.startDateToDisplay,
+        endDate: this.endDateToDisplay,
+      } as IDatePickerSelection);
     }
   }
   //#endregion

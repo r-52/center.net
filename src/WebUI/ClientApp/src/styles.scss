@@ -3,6 +3,9 @@
 @use "./styles/theme";
 @use "./styles/variables";
 
+// TODO:
+@import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+
 html,
 body {
   height: 100%;

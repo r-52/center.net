@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [],
   imports: [
@@ -26,6 +28,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatNativeDateModule,
     MatCardModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
   ],
   exports: [
     MatButtonModule,
@@ -39,6 +43,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatNativeDateModule,
     MatCardModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule {}

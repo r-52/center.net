@@ -4,11 +4,16 @@
 
 <div class="row align-items-baseline mb-3">
   <div class="col">
-    <app-calendar-week-datepicker></app-calendar-week-datepicker>
+    <app-calendar-week-datepicker
+      (finshedDateSelection)="finshedDateSelection($event)"
+    ></app-calendar-week-datepicker>
   </div>
   <div class="col">
     <app-refresh-button (refresh)="loadData()"></app-refresh-button>
   </div>
 </div>
 
-<app-control-header i18n>Selected work week</app-control-header>
+<app-work-week-table-card
+  [startDate]="startDate"
+  [endDate]="endDate"
+></app-work-week-table-card>

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <mat-card>
+      <mat-card-title i18n
+        >From {{ startDate | date }} to {{ endDate | date }}</mat-card-title
+      >
+      <mat-card-content>
+        <app-work-week-time-table
+          [startDate]="startDate"
+          [endDate]="endDate"
+        ></app-work-week-time-table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

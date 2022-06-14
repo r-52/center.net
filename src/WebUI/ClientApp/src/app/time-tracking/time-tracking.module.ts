@@ -8,12 +8,16 @@ import { HistoryListComponent } from './history/history-list/history-list.compon
 import { HistoryDetailComponent } from './history/history-detail/history-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
+import { WorkWeekTimeTableComponent } from './shared/components/tables/work-week-time-table/work-week-time-table.component';
+import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-table-card/work-week-table-card.component';
 
 @NgModule({
   declarations: [
     AddNewTimeTrackComponent,
     HistoryListComponent,
     HistoryDetailComponent,
+    WorkWeekTimeTableComponent,
+    WorkWeekTableCardComponent,
   ],
   imports: [
     CommonModule,

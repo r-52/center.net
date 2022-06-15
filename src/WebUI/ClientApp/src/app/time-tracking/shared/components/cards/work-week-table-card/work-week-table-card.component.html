@@ -5,10 +5,14 @@
         >From {{ startDate | date }} to {{ endDate | date }}</mat-card-title
       >
       <mat-card-content>
-        <app-work-week-time-table
-          [startDate]="startDate"
-          [endDate]="endDate"
-        ></app-work-week-time-table>
+        <div class="row">
+          <div class="col-12">
+            <app-work-week-time-table
+              [startDate]="startDate"
+              [endDate]="endDate"
+            ></app-work-week-time-table>
+          </div>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>

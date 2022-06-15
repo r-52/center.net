@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BaseComponent } from 'src/app/shared/components/base/base.component';
+import { DateToCalendarWeekResolverService } from 'src/app/shared/services/date-to-calendar-week-resolver.service';
+import { IWorkWeekDayEntry } from '../../../models/work-week-day-entry.model';
 
 @Component({
   selector: 'app-work-week-time-table',
@@ -15,11 +17,28 @@ export class WorkWeekTimeTableComponent
 
   @Input()
   public endDate!: Date;
-  public constructor() {
+
+  protected displayedColumns: string[] = ['date'];
+
+  protected dataSource: IWorkWeekDayEntry[] = [];
+
+  public constructor(
+    private readonly _dateWeekBuilderService: DateToCalendarWeekResolverService
+  ) {
     super();
   }
 
   public ngOnInit(): void {
     super.ngOnInit();
+    this._prepareTable();
   }
+
+  //#region methods
+  private _prepareTable() {
+    const resolvedDates = this._dateWeekBuilderService.resolveDate(
+      this.endDate
+    );
+    resolvedDates.forEach((x) => this.dataSource.push({ date: x }));
+  }
+  //#endregion
 }

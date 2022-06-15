@@ -7,10 +7,21 @@
 .mat-sidenav-content {
     padding-left: $padding-1;
     padding-right: $padding-1;
-    padding-top: $padding-1;
 }
 
 .container-no-padding {
     padding-right: 0 !important;
     padding-left: 0 !important;
+}
+
+
+.width-100 {
+    width: 100%;
+}
+
+
+.content {
+    width: 100%;
+    height: calc(100vh - 64px);
+    position: fixed;
 }

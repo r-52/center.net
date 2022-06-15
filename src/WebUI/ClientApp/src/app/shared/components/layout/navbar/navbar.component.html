@@ -7,11 +7,10 @@
   <mat-sidenav-container
     class="sidenav-container"
     [style.marginTop.px]="mobileQuery.matches ? 64 : 0"
-    fullscreen
   >
     <mat-sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="!mobileQuery.matches"
+      [fixedInViewport]="true"
       fixedTopGap="64"
       [opened]="!mobileQuery.matches"
     >
@@ -67,7 +66,9 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <ng-content></ng-content>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

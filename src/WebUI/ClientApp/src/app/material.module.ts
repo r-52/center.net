@@ -13,6 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [],
   imports: [
@@ -30,6 +31,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule,
     MatProgressBarModule,
     MatSnackBarModule,
+    MatTableModule,
   ],
   exports: [
     MatButtonModule,
@@ -45,6 +47,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule,
     MatProgressBarModule,
     MatSnackBarModule,
+    MatTableModule,
   ],
 })
 export class MaterialModule {}

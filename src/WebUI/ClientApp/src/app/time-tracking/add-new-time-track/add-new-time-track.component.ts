@@ -28,7 +28,6 @@ export class AddNewTimeTrackComponent extends BaseComponent implements OnInit {
   public finshedDateSelection(selection: IDatePickerSelection): void {
     this.startDate = selection.startDate;
     this.endDate = selection.endDate;
-    debugger;
   }
   //#endregion
 }

@@ -18,40 +18,34 @@
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>home</mat-icon>&nbsp;Home
         </div>
-        <mat-list-item>
-          <a
-            routerLink="/"
-            routerLinkActive="list-item-active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            mat-line
-            i18n
-            >Dashboard</a
-          >
-        </mat-list-item>
-
+        <a
+          routerLink="/"
+          routerLinkActive="list-item-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-line
+          i18n
+          ><mat-list-item>Dashboard</mat-list-item></a
+        >
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>schedule</mat-icon>&nbsp;Time Tracking
         </div>
-        <mat-list-item>
-          <a
-            routerLink="/time-tracking/new"
-            routerLinkActive="list-item-active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            mat-line
-            i18n
-            >Add Time</a
-          >
-        </mat-list-item>
-        <mat-list-item>
-          <a
-            routerLink="/time-tracking/history/-/list"
-            routerLinkActive="list-item-active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            mat-line
-            i18n
-            >History</a
-          >
-        </mat-list-item>
+        <a
+          routerLink="/time-tracking/new"
+          routerLinkActive="list-item-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-line
+          i18n
+        >
+          <mat-list-item>Add Time</mat-list-item></a
+        >
+        <a
+          routerLink="/time-tracking/history/-/list"
+          routerLinkActive="list-item-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-line
+          i18n
+          ><mat-list-item>History</mat-list-item></a
+        >
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>app_registration</mat-icon>&nbsp;CMS
         </div>

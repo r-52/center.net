@@ -18,7 +18,15 @@ export class WorkWeekTimeTableComponent
   @Input()
   public endDate!: Date;
 
-  protected displayedColumns: string[] = ['date'];
+  protected displayedColumns: string[] = [
+    'date',
+    'timeStart',
+    'timeEnd',
+    'timeTotal',
+    'breakTotal',
+    'numberOfTasks',
+    'actions',
+  ];
 
   protected dataSource: IWorkWeekDayEntry[] = [];
 

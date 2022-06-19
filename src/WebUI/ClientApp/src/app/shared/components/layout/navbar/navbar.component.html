@@ -23,8 +23,7 @@
           routerLinkActive="list-item-active"
           [routerLinkActiveOptions]="{ exact: true }"
           mat-line
-          i18n
-          ><mat-list-item>Dashboard</mat-list-item></a
+          ><mat-list-item i18n>Dashboard</mat-list-item></a
         >
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>schedule</mat-icon>&nbsp;Time Tracking
@@ -34,17 +33,15 @@
           routerLinkActive="list-item-active"
           [routerLinkActiveOptions]="{ exact: true }"
           mat-line
-          i18n
         >
-          <mat-list-item>Add Time</mat-list-item></a
+          <mat-list-item i18n>Add Time</mat-list-item></a
         >
         <a
           routerLink="/time-tracking/history/-/list"
           routerLinkActive="list-item-active"
           [routerLinkActiveOptions]="{ exact: true }"
           mat-line
-          i18n
-          ><mat-list-item>History</mat-list-item></a
+          ><mat-list-item i18n>History</mat-list-item></a
         >
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>app_registration</mat-icon>&nbsp;CMS
@@ -60,8 +57,10 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <div class="content">
-        <ng-content></ng-content>
+      <div class="row">
+        <div class="col">
+          <ng-content></ng-content>
+        </div>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

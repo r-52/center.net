@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
 import { WorkWeekTimeTableComponent } from './shared/components/tables/work-week-time-table/work-week-time-table.component';
 import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-table-card/work-week-table-card.component';
+import { AddNewTimeEntryModalComponent } from './shared/components/modals/add-new-time-entry-modal/add-new-time-entry-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-
     HistoryDetailComponent,
     WorkWeekTimeTableComponent,
     WorkWeekTableCardComponent,
+    AddNewTimeEntryModalComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-
     SharedModule,
     TimeTrackingRoutingModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
 })
 export class TimeTrackingModule {}

@@ -13,6 +13,8 @@ export class BaseComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.onPreInit();
+    this.onBuildForm();
+    this.onSubscribe();
   }
 
   public ngOnDestroy(): void {
@@ -22,6 +24,10 @@ export class BaseComponent implements OnInit, OnDestroy {
     }
     this.onPostUnsubscribe();
   }
+
+  protected onBuildForm(): void {}
+
+  protected onSubscribe(): void {}
 
   protected onPreInit(): void {}
 

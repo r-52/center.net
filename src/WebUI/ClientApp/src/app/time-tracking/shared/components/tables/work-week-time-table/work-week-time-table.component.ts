@@ -41,6 +41,14 @@ export class WorkWeekTimeTableComponent
     this._prepareTable();
   }
 
+  //#region event handler
+  public addTime(element: IWorkWeekDayEntry): void {}
+
+  public editTime(element: IWorkWeekDayEntry): void {}
+
+  public deleteTime(element: IWorkWeekDayEntry): void {}
+  //#endregion
+
   //#region methods
   private _prepareTable() {
     const resolvedDates = this._dateWeekBuilderService.resolveDate(

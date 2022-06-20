@@ -8,9 +8,8 @@ describe('AddNewTimeEntryModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddNewTimeEntryModalComponent ]
-    })
-    .compileComponents();
+      declarations: [AddNewTimeEntryModalComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AddNewTimeEntryModalComponent);
     component = fixture.componentInstance;

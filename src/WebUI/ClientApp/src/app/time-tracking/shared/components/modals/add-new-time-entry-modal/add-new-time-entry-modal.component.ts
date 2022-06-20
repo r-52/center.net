@@ -14,7 +14,17 @@ export interface IAddNewTimeEntryModalForm {
 
   endedAt: FormControl<Date>;
 
-  description?: FormControl<string>;
+  description?: FormControl<string | null>;
+
+  isWorkTime: FormControl<boolean>;
+
+  projectId?: FormControl<number | null>;
+
+  taskId?: FormControl<number | null>;
+
+  userId?: FormControl<number | null>;
+
+  timeTypeId: FormControl<number>;
 }
 
 @Component({
@@ -34,11 +44,35 @@ export class AddNewTimeEntryModalComponent
 
   //#region helper
   public get startedAt() {
-    return this.form.get('startedAt')?.value;
+    return this.form.value.startedAt;
   }
 
   public get endedAt() {
-    return this.form.get('endedAt')?.value;
+    return this.form.value.endedAt;
+  }
+
+  public get timeTypeId() {
+    return this.form.value.timeTypeId;
+  }
+
+  public get description() {
+    return this.form.value.description;
+  }
+
+  public get isWorkTime() {
+    return this.form.value.isWorkTime;
+  }
+
+  public get projectId() {
+    return this.form.value.projectId;
+  }
+
+  public get taskId() {
+    return this.form.value.taskId;
+  }
+
+  public get userId() {
+    return this.form.value.userId;
   }
   //#endregion
 
@@ -54,6 +88,24 @@ export class AddNewTimeEntryModalComponent
       endedAt: new FormControl<Date>(new Date(), {
         validators: [Validators.required],
         nonNullable: true,
+      }),
+      description: new FormControl<string>('', {
+        nonNullable: false,
+      }),
+      isWorkTime: new FormControl<boolean>(true, {
+        nonNullable: true,
+      }),
+      timeTypeId: new FormControl<number>(0, {
+        nonNullable: true,
+      }),
+      projectId: new FormControl<number>(0, {
+        nonNullable: false,
+      }),
+      taskId: new FormControl<number>(0, {
+        nonNullable: false,
+      }),
+      userId: new FormControl<number>(0, {
+        nonNullable: false,
       }),
     });
   }

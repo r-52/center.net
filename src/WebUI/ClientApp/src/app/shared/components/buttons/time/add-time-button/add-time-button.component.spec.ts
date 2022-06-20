@@ -8,9 +8,8 @@ describe('AddTimeButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddTimeButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [AddTimeButtonComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AddTimeButtonComponent);
     component = fixture.componentInstance;

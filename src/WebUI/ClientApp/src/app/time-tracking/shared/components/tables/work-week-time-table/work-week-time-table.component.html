@@ -49,7 +49,9 @@
       <th mat-header-cell *matHeaderCellDef i18n>Actions</th>
       <td mat-cell *matCellDef="let element">
         <div class="action-wrapper">
-          <app-add-time-button (add)="addTime(element)"></app-add-time-button>
+          <app-open-add-time-modal
+            (modalClosed)="addTime(element)"
+          ></app-open-add-time-modal>
           <app-edit-time-button
             (edit)="editTime(element)"
           ></app-edit-time-button>

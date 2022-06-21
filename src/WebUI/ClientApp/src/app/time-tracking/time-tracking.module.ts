@@ -12,6 +12,7 @@ import { WorkWeekTimeTableComponent } from './shared/components/tables/work-week
 import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-table-card/work-week-table-card.component';
 import { AddNewTimeEntryModalComponent } from './shared/components/modals/add-new-time-entry-modal/add-new-time-entry-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OpenAddTimeModalComponent } from './shared/components/controls/open-add-time-modal/open-add-time-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     WorkWeekTimeTableComponent,
     WorkWeekTableCardComponent,
     AddNewTimeEntryModalComponent,
+    OpenAddTimeModalComponent,
   ],
   imports: [
     CommonModule,

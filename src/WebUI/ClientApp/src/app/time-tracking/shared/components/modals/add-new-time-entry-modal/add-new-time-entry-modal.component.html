@@ -1,1 +1,68 @@
-<p>add-new-time-entry-modal works!</p>
+<h2 i18n mat-dialog-title>Add new time</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <section class="mode-section">
+      <mat-checkbox formControlName="isHumanTime" class="example-margin" i18n
+        >Use fixed time entry</mat-checkbox
+      >
+    </section>
+
+    <ng-container *ngIf="isHumanTime">
+      <mat-form-field class="width-100" appearance="fill">
+        <mat-label i18n>Time duration</mat-label>
+        <input
+          matInput
+          i18n-placeholder="Time duration"
+          formControlName="humanTime"
+        />
+      </mat-form-field>
+    </ng-container>
+
+    <ng-container *ngIf="!isHumanTime">
+      <mat-form-field class="width-100" appearance="fill">
+        <mat-label i18n>Choose your start date</mat-label>
+        <input
+          matInput
+          formControlName="startedAt"
+          [matDatepicker]="startPicker"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startPicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="width-100" appearance="fill">
+        <mat-label i18n>Choose your end of the work</mat-label>
+        <input matInput formControlName="endedAt" [matDatepicker]="endPicker" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endPicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker>
+      </mat-form-field>
+    </ng-container>
+
+    <mat-radio-group
+      formControlName="isWorkTime"
+      i18n-aria-label="Select which type should be tracked"
+    >
+      <mat-radio-button [value]="0" i18n>Work time</mat-radio-button>
+      <mat-radio-button [value]="1" i18n>Project related time</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="width-100" appearance="fill">
+      <mat-label i18n>Notes</mat-label>
+      <textarea
+        matInput
+        i18n-placeholder="Notes"
+        formControlName="description"
+      ></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

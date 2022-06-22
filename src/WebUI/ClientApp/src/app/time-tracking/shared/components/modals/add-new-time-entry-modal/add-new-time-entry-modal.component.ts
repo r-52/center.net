@@ -16,7 +16,11 @@ export interface IAddNewTimeEntryModalForm {
 
   description?: FormControl<string | null>;
 
-  isWorkTime: FormControl<boolean>;
+  isWorkTime: FormControl<number>;
+
+  humanTime?: FormControl<string | null>;
+
+  isHumanTime: FormControl<boolean>;
 
   projectId?: FormControl<number | null>;
 
@@ -74,6 +78,14 @@ export class AddNewTimeEntryModalComponent
   public get userId() {
     return this.form.value.userId;
   }
+
+  public get humanTime() {
+    return this.form.value.humanTime;
+  }
+
+  public get isHumanTime() {
+    return this.form.value.isHumanTime;
+  }
   //#endregion
 
   protected onBuildForm(): void {
@@ -92,7 +104,10 @@ export class AddNewTimeEntryModalComponent
       description: new FormControl<string>('', {
         nonNullable: false,
       }),
-      isWorkTime: new FormControl<boolean>(true, {
+      isHumanTime: new FormControl<boolean>(false, {
+        nonNullable: true,
+      }),
+      isWorkTime: new FormControl<number>(0, {
         nonNullable: true,
       }),
       timeTypeId: new FormControl<number>(0, {
@@ -105,6 +120,9 @@ export class AddNewTimeEntryModalComponent
         nonNullable: false,
       }),
       userId: new FormControl<number>(0, {
+        nonNullable: false,
+      }),
+      humanTime: new FormControl<string>('', {
         nonNullable: false,
       }),
     });

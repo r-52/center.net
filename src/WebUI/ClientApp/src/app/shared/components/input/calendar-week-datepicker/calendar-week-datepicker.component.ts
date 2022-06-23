@@ -18,13 +18,10 @@ import {
 } from '@angular/material/core';
 import {
   DateRange,
-  MatDatepicker,
   MatDatepickerInputEvent,
-  MatDateRangeInput,
-  MatDateRangePicker,
   MatDateRangeSelectionStrategy,
   MAT_DATE_RANGE_SELECTION_STRATEGY,
-} from '@angular/material/datepicker';
+} from '@matheo/datepicker';
 import { IDatePickerSelection } from 'src/app/shared/models/datepicker-selection.model';
 import { DateToCalendarWeekResolverService } from 'src/app/shared/services/date-to-calendar-week-resolver.service';
 import { BaseComponent } from '../../base/base.component';
@@ -117,7 +114,8 @@ export class CalendarWeekDatepickerComponent
   //#region event handling
   public changeDate(
     form: 'start' | 'end',
-    event: MatDatepickerInputEvent<Date>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    event: MatDatepickerInputEvent<any, DateRange<any>>
   ): void {
     const selected = event?.value!;
     switch (form) {

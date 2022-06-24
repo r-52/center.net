@@ -45,12 +45,42 @@
     </ng-container>
 
     <mat-radio-group
+      class="width-100"
       formControlName="isWorkTime"
       i18n-aria-label="Select which type should be tracked"
     >
       <mat-radio-button [value]="0" i18n>Work time</mat-radio-button>
       <mat-radio-button [value]="1" i18n>Project related time</mat-radio-button>
     </mat-radio-group>
+
+    <ng-container *ngIf="isWorkTime === 1">
+      <mat-form-field appearance="fill" class="width-100">
+        <mat-label i18n>Select your project</mat-label>
+        <mat-select formControlName="projectId" name="project">
+          <mat-option *ngFor="let project of projects" [value]="project.id">
+            {{ project.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <ng-container *ngIf="selectedProject">
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label i18n>Select your task</mat-label>
+          <mat-select
+            (selectionChanged)="projectChanged($event)"
+            formControlName="taskId"
+            name="task"
+          >
+            <mat-option
+              *ngFor="let task of selectedProject.tasks"
+              [value]="task.id"
+            >
+              {{ task.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </ng-container>
+    </ng-container>
 
     <mat-form-field class="width-100" appearance="fill">
       <mat-label i18n>Notes</mat-label>

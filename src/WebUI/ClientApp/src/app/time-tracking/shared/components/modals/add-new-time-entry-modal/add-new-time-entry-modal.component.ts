@@ -8,6 +8,8 @@ import {
 import * as luxon from 'luxon';
 import { DateTime } from 'luxon';
 import { BaseComponent } from 'src/app/shared/components/base/base.component';
+import { IAvailableProject } from 'src/app/shared/models/available-project.model';
+import { ProjectService } from 'src/app/shared/services/project.service';
 
 export interface IAddNewTimeEntryModalForm {
   startedAt: FormControl<Date>;
@@ -42,7 +44,14 @@ export class AddNewTimeEntryModalComponent
 {
   protected form!: FormGroup<IAddNewTimeEntryModalForm>;
 
-  public constructor(private readonly _formBuilder: FormBuilder) {
+  protected projects: IAvailableProject[] = [];
+
+  protected selectedProject!: IAvailableProject;
+
+  public constructor(
+    private readonly _projectService: ProjectService,
+    private readonly _formBuilder: FormBuilder
+  ) {
     super();
   }
 
@@ -127,6 +136,8 @@ export class AddNewTimeEntryModalComponent
       }),
     });
   }
+
+  protected projectChanged(x: Event) {}
 
   //#region methods
   private _getDefaultStartedAtDate(): Date {

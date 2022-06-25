@@ -13,6 +13,8 @@ import { WorkWeekTableCardComponent } from './shared/components/cards/work-week-
 import { AddNewTimeEntryModalComponent } from './shared/components/modals/add-new-time-entry-modal/add-new-time-entry-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OpenAddTimeModalComponent } from './shared/components/controls/open-add-time-modal/open-add-time-modal.component';
+import { ProjectListComponent } from './project/project-list/project-list.component';
+import { ProjectDetailComponent } from './project/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { OpenAddTimeModalComponent } from './shared/components/controls/open-add
     WorkWeekTableCardComponent,
     AddNewTimeEntryModalComponent,
     OpenAddTimeModalComponent,
+    ProjectListComponent,
+    ProjectDetailComponent,
   ],
   imports: [
     CommonModule,

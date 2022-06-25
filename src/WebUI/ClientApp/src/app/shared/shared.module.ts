@@ -13,6 +13,7 @@ import { ControlHeaderComponent } from './components/headlines/control-header/co
 import { AddTimeButtonComponent } from './components/buttons/time/add-time-button/add-time-button.component';
 import { EditTimeButtonComponent } from './components/buttons/time/edit-time-button/edit-time-button.component';
 import { DeleteTimeButtonComponent } from './components/buttons/time/delete-time-button/delete-time-button.component';
+import { AddProjectComponent } from './components/buttons/project/add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DeleteTimeButtonComponent } from './components/buttons/time/delete-time
     AddTimeButtonComponent,
     EditTimeButtonComponent,
     DeleteTimeButtonComponent,
+    AddProjectComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, MaterialModule, RouterModule],
   exports: [
@@ -38,6 +40,7 @@ import { DeleteTimeButtonComponent } from './components/buttons/time/delete-time
     AddTimeButtonComponent,
     EditTimeButtonComponent,
     DeleteTimeButtonComponent,
+    AddProjectComponent,
   ],
 })
 export class SharedModule {}

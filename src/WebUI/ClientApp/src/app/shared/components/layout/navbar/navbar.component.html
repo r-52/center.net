@@ -29,7 +29,7 @@
           <mat-icon>schedule</mat-icon>&nbsp;Time Tracking
         </div>
         <a
-          routerLink="/time-tracking/new"
+          routerLink="/time-tracking/time/-/new"
           routerLinkActive="list-item-active"
           [routerLinkActiveOptions]="{ exact: true }"
           mat-line
@@ -42,6 +42,13 @@
           [routerLinkActiveOptions]="{ exact: true }"
           mat-line
           ><mat-list-item i18n>History</mat-list-item></a
+        >
+        <a
+          routerLink="/time-tracking/project/-/list"
+          routerLinkActive="list-item-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-line
+          ><mat-list-item i18n>Project</mat-list-item></a
         >
         <div class="uppercase-text" i18n mat-subheader>
           <mat-icon>app_registration</mat-icon>&nbsp;CMS

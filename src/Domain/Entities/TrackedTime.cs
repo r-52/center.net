@@ -22,4 +22,6 @@ public class TrackedTimeModel : BaseAuditableEntity
     public TaskModel? Task { get; set; }
 
     public int? TaskId { get; set; }
+
+    public int UserId { get; set; } = default!;
 }

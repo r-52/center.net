@@ -12,6 +12,10 @@ namespace HumanCenterNet.WebUI.Controllers;
 [Authorize]
 public class TodoItemsController : ApiControllerBase
 {
+    public TodoItemsController(ILogger logger) : base(logger)
+    {
+    }
+
     [HttpGet]
     public async Task<ActionResult<PaginatedList<TodoItemBriefDto>>> GetTodoItemsWithPagination([FromQuery] GetTodoItemsWithPaginationQuery query)
     {

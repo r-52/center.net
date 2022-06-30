@@ -11,6 +11,10 @@ namespace HumanCenterNet.WebUI.Controllers;
 [Authorize]
 public class TodoListsController : ApiControllerBase
 {
+    public TodoListsController(ILogger logger) : base(logger)
+    {
+    }
+
     [HttpGet]
     public async Task<ActionResult<TodosVm>> Get()
     {

@@ -5,6 +5,9 @@ public class SlugGenerator : ISlugGenerator
 {
     public async Task<Slug> GenerateAsync(int length = 32)
     {
+        if (length <= 0) {
+            throw new Exception("slug length must be greater than 0");
+        }
         var nanoId = await Nanoid.Nanoid.GenerateAsync(size: length);
         var thisYearTicks = new DateTime(2022, 1, 1).Ticks;
         var diff = DateTime.Now.Ticks - thisYearTicks;

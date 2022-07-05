@@ -1,0 +1,10 @@
+global using Xunit;
+global using Moq;
+global using HumanCenterNet.Domain.Common;
+global using HumanCenterNet.Domain.Entities;
+global using HumanCenterNet.Domain.Enums;
+global using HumanCenterNet.Domain.Events;
+global using HumanCenterNet.Domain.Exceptions;
+global using HumanCenterNet.Domain.ValueObjects;
+global using HumanCenterNet.Domain.Models.Db;
+global using HumanCenterNet.Domain.Db;

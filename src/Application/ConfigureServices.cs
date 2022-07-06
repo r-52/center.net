@@ -2,6 +2,7 @@
 using HumanCenterNet.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
+using HumanCenterNet.Domain;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +17,7 @@ public static class ConfigureServices
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehaviour<,>));
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+        services.AddDomainServices();
         return services;
     }
 }

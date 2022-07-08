@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using HumanCenterNet.Domain.Extensions;
+
 namespace HumanCenterNet.Domain.Time.Parser;
 
 
@@ -12,26 +15,29 @@ public class HumanTimeParser : IHumanTimeParser
 
         var parseText = input.Trim();
 
-        var isAlreadyDecimalMatched = false;
-        for (int x = 0; x < parseText.Length; x++)
+        Regex decimalRegx = new Regex(@"(\.|\,)");
+        if (decimalRegx.IsMatch(parseText))
         {
-            char c = parseText[x];
+            throw new Exception("got wrong input. no decimal values are allowed");
+        }
 
-            string regExp = options switch
-            {
-                HumanTimeParserOptions.DecimalHourSeperatorComma => @"\,",
-                HumanTimeParserOptions.DecimalHourSeperatorDot => @"\.",
-                HumanTimeParserOptions.DecimalHourSeperatorCommaOrDot => @"\,|\.",
-            };
 
-            var isDecimal = Regex.IsMatch(c.ToString(), regExp);
-            if (isDecimal && !isAlreadyDecimalMatched)
+        string pattern = @"(d|h|min|m)";
+        Regex regex = new Regex(pattern);
+        var splitted = regex.Split(parseText);
+        ParsedTimeSegment segment = new();
+        List<ParsedTimeSegment> res = new();
+        foreach (var elem in splitted.ToList())
+        {
+            if (regex.IsMatch(elem))
             {
-                isAlreadyDecimalMatched = true;
+                var unit = ParsedTimeSegmentTypeMatcher.Match(elem);
+                segment.Type = unit;
+                res.Add(segment.Clone<ParsedTimeSegment>());
             }
-            else if (isAlreadyDecimalMatched)
+            else
             {
-                throw new ArgumentException("wrong decimal handling. multiple seperators detected");
+                segment.Value = Convert.ToInt32(elem);
             }
         }
 

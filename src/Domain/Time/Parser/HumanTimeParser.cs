@@ -6,7 +6,7 @@ namespace HumanCenterNet.Domain.Time.Parser;
 
 public class HumanTimeParser : IHumanTimeParser
 {
-    public Task Parse(string input, HumanTimeParserOptions options)
+    public Task<List<ParsedTimeSegment>> Parse(string input, HumanTimeParserOptions options)
     {
         if (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input))
         {
@@ -29,6 +29,10 @@ public class HumanTimeParser : IHumanTimeParser
         List<ParsedTimeSegment> res = new();
         foreach (var elem in splitted.ToList())
         {
+            if (string.IsNullOrWhiteSpace(elem))
+            {
+                continue;
+            }
             if (regex.IsMatch(elem))
             {
                 var unit = ParsedTimeSegmentTypeMatcher.Match(elem);
@@ -41,6 +45,6 @@ public class HumanTimeParser : IHumanTimeParser
             }
         }
 
-        return Task.FromResult("");
+        return Task.FromResult(res);
     }
 }

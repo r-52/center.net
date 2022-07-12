@@ -4,7 +4,9 @@ using HumanCenterNet.Application.TodoItems.Commands.DeleteTodoItem;
 using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItem;
 using HumanCenterNet.Application.TodoItems.Commands.UpdateTodoItemDetail;
 using HumanCenterNet.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+using HumanCenterNet.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HumanCenterNet.WebUI.Controllers;
@@ -12,7 +14,7 @@ namespace HumanCenterNet.WebUI.Controllers;
 [Authorize]
 public class TodoItemsController : ApiControllerBase
 {
-    public TodoItemsController(ILogger logger) : base(logger)
+    public TodoItemsController(ILogger logger, UserManager<ApplicationUser> userManager) : base(logger, userManager)
     {
     }
 

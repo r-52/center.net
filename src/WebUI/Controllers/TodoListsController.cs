@@ -3,7 +3,9 @@ using HumanCenterNet.Application.TodoLists.Commands.DeleteTodoList;
 using HumanCenterNet.Application.TodoLists.Commands.UpdateTodoList;
 using HumanCenterNet.Application.TodoLists.Queries.ExportTodos;
 using HumanCenterNet.Application.TodoLists.Queries.GetTodos;
+using HumanCenterNet.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HumanCenterNet.WebUI.Controllers;
@@ -11,7 +13,7 @@ namespace HumanCenterNet.WebUI.Controllers;
 [Authorize]
 public class TodoListsController : ApiControllerBase
 {
-    public TodoListsController(ILogger logger) : base(logger)
+    public TodoListsController(ILogger logger, UserManager<ApplicationUser> userManager) : base(logger, userManager)
     {
     }
 

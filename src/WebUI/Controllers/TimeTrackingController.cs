@@ -1,9 +1,12 @@
+using HumanCenterNet.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
+
 namespace HumanCenterNet.WebUI.Controllers;
 
 
 public class TimeTrackingController : ApiAuthorizeClass
 {
-    public TimeTrackingController(ILogger logger) : base(logger)
+    public TimeTrackingController(ILogger logger, UserManager<ApplicationUser> userManager) : base(logger, userManager)
     {
     }
 

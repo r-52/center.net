@@ -5,7 +5,9 @@ public static class DomainServices
 {
     public static IServiceCollection AddDomainServices(this IServiceCollection services)
     {
-        services.AddDbServices();
+        services
+            .AddDbServices()
+            .AddTimeServices();
         return services;
     }
 }
